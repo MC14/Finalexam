@@ -1,0 +1,28 @@
+
+<ul class="nav flex-column">
+  <div>
+    <table>
+      <thead>
+      <tr>
+        <th> #ID </th>
+        <th> Car Model </th>
+        <th> Car Price </th>
+        <th> Car Details </th>
+        <th> Add to Shopping Cart </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let car of carList">
+        <th>{{ car.carId }}</th>
+        <td>{{ car.carModel }}</td>
+        <td>${{ car.carPrice}}</td>
+        <td>
+          <a [routerLink]="['/car',car.carId]" routerLinkActive="active" ariaCurrentWhenActive="page">details</a>
+        </td>
+        <td>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</ul>
